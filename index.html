@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Katpillage: Caterpillar Command</title>
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Katpillage presents</p>
+        <h1>Caterpillar Command</h1>
+        <p class="tagline">A nostalgic turn-based artillery skirmish where cartoon caterpillar clans climb the ranks, shatter scenery, and evolve into bomb-dropping butterflies.</p>
+      </div>
+      <section class="panel compact">
+        <label>Difficulty
+          <select id="difficulty">
+            <option value="easy">Easy - clear dotted guide</option>
+            <option value="normal" selected>Normal - rough dotted guide</option>
+            <option value="hard">Hard - commander instincts only</option>
+          </select>
+        </label>
+        <label>Stage
+          <select id="stageSelect"></select>
+        </label>
+        <button id="newBattle">New Battle</button>
+      </section>
+    </header>
+
+    <section class="layout">
+      <aside class="panel roster">
+        <h2>General Status</h2>
+        <div id="rankCard"></div>
+        <h3>Available Troops</h3>
+        <div id="troopList"></div>
+        <h3>Weapons</h3>
+        <div id="weaponList"></div>
+      </aside>
+
+      <section class="game-card">
+        <canvas id="game" width="1100" height="620" aria-label="Turn based caterpillar artillery game"></canvas>
+        <div class="hud">
+          <div id="turnInfo"></div>
+          <div class="controls">
+            <label>Angle <input id="angle" type="range" min="5" max="175" value="45"><span id="angleValue">45°</span></label>
+            <label>Power <input id="power" type="range" min="15" max="95" value="58"><span id="powerValue">58</span></label>
+            <button id="fire">Fire!</button>
+            <button id="evolve">Evolve</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel brief">
+        <h2>Stage Briefing</h2>
+        <div id="briefing"></div>
+        <h3>Battle Log</h3>
+        <ol id="log"></ol>
+      </aside>
+    </section>
+  </main>
+  <script src="src/game.js"></script>
+</body>
+</html>
