@@ -4,16 +4,17 @@ A browser-based artillery prototype inspired by classic turn-based terrain battl
 
 ## Is it deployed?
 
-Not yet. This repository currently contains a static web prototype only. You can run it locally in any modern browser, or deploy the same files to any static hosting service such as GitHub Pages, Netlify, Vercel, Cloudflare Pages, or an S3/static bucket.
+Not yet. This repository currently contains a static web prototype only. The main `index.html` file is now self-contained, so you can download just that one file and open it in any modern browser. You can also deploy the repository to any static hosting service such as GitHub Pages, Netlify, Vercel, Cloudflare Pages, or an S3/static bucket.
 
 ## How to play locally
 
-You do not need a build step.
+You do not need a build step. For the easiest test, use only `index.html`; the `src/` files are kept as readable source copies for development.
 
 ### Option 1: Open the file directly
 
-1. Open `index.html` in a modern desktop browser.
-2. The game should load immediately.
+1. Download `index.html`.
+2. Open `index.html` in a modern desktop browser.
+3. The game should load immediately, including its styling and gameplay logic.
 
 ### Option 2: Run a local static server
 
